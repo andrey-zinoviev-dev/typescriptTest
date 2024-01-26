@@ -1,0 +1,38 @@
+.home__ul {
+  padding: 0;
+  list-style-type: none;
+  gap: 1vw;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+.home__ul-li {
+  border: 2px solid black;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.home__ul-li-img {
+  max-width: 300px;
+  height: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0 0 24px 24px;
+}
+
+.home__ul-li-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home__ul-li-btn {
+  background-color: #f6ea48;
+  color: black;
+  height: 50px;
+  border-radius: 0 0 8px 8px;
+}
