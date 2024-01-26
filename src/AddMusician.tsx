@@ -11,7 +11,7 @@ export default function AddMusician() {
   function showInputName(evt:React.FormEvent<HTMLInputElement>):void {
     // console.log(evt.currentTarget.name)
     // const nameToUpdate:string = evt.currentTarget.name; 
-    setDataToUpload({...dataToUpload, [evt.currentTarget.name]: evt.currentTarget.value})
+    setDataToUpload({...dataToUpload, [evt.currentTarget.name]: evt.currentTarget.value});
   }
 
   return (
