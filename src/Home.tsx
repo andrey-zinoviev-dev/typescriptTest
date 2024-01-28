@@ -8,8 +8,9 @@ export default function Home() {
   const [musiciansLoaded, setMusiciansLoaded] = React.useState<Musician[]>([]);
 
   React.useEffect(() => {
-    console.log(musicians);
+    // console.log(musicians);
     setMusiciansLoaded(musicians);
+    console.log(localStorage.getItem("musician"))
   }, [])
 
   return (
