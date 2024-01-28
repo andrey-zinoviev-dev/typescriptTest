@@ -1,5 +1,6 @@
 import React from "react"
 import { Musician } from "./models"
+
 // import Billy from "./assets/billy.jpeg";
 //porps interface
 interface AddMusicianProps {
@@ -29,6 +30,7 @@ export default function AddMusician({setMusiciansLoaded}: AddMusicianProps) {
     <section className="add-musician">
       <div className="container">
         <h3>Добавить музыканта</h3>
+
         <form onSubmit={submitForm}>
           <input name="name" required type="text" onChange={showInputName}></input>
           <input name="genre" required type="text" onChange={showInputName}></input>
