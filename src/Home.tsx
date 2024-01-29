@@ -7,6 +7,7 @@ import { musicians } from "./utils";
 
 export default function Home() {
   const [musiciansLoaded, setMusiciansLoaded] = React.useState<Musician[]>([]);
+  const [addMusicianClicked, setAddMusicianClicked] = React.useState<boolean>(false);
   // const [addMusician, setAddMusician] = React.useState
 
   React.useEffect(() => {
@@ -27,9 +28,14 @@ export default function Home() {
               </li>
             })}
           </ul>
+          <button onClick={():void => {
+            setAddMusicianClicked((prevValue):boolean => {
+              return !prevValue;
+            })
+          }}>{addMusicianClicked ? "-" : "+"}</button>
         </div>
       </section>
-      <AddMusician setMusiciansLoaded={setMusiciansLoaded} />
+      {addMusicianClicked && <AddMusician setMusiciansLoaded={setMusiciansLoaded} />}
     </>
 
   )
