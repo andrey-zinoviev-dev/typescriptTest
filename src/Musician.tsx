@@ -9,9 +9,9 @@ interface MusicianProps {
 export default function MusicianProfile({musician}: MusicianProps) {
   const [clicked, setClicked] = React.useState(false);
   
-  React.useEffect(() => {
-    console.log(clicked);
-  }, [clicked])
+  // React.useEffect(() => {
+  //   console.log(clicked);
+  // }, [clicked])
 
   return (
     <>
