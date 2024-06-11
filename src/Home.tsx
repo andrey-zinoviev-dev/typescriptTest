@@ -4,24 +4,16 @@ import { Musician } from "./models";
 // import { musicians } from "./utils";
 import AddMusician from "./AddMusician";
 import { musicians } from "./utils";
-import { useAppSelector, useAppDispatch } from './hooks/hooks'
-import { startLogin } from "./features/loginSlice";
-import { loginSlice } from "./features/loginSlice";
+import { useAppDispatch } from './hooks/hooks'
+// import { startLogin } from "./features/loginSlice";
+// import { loginSlice } from "./features/loginSlice";
 import { loadUser } from "./features/userSlice";
 
 export default function Home() {
   const [musiciansLoaded, setMusiciansLoaded] = React.useState<Musician[]>([]);
   const [addMusicianClicked, setAddMusicianClicked] = React.useState<boolean>(false);
-  // const [addMusician, setAddMusician] = React.useState
-  const loggedIn = useAppSelector(state => state.user._id);
-  const dispatch = useAppDispatch();
 
-  // interface LoginData {
-  //   email: string,
-  //   _id: string,
-  //   musicians: Musician[],
-  //   name: string,
-  // }
+  const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     // setMusiciansLoaded(musicians);
@@ -47,7 +39,11 @@ export default function Home() {
             })
           }}>{addMusicianClicked ? "-" : "+"}</button>
           <button onClick={() => {
-            // dispatch(loadUser())
+            dispatch(loadUser({
+              _id: "123",
+              name: "Dris",
+              email: "@mail.com",
+            }))
           }}>войти</button>
         </div>
       </section>
